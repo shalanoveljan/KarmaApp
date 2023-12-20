@@ -1,0 +1,12 @@
+C:\Users\OMEN\Desktop\VS Code\Karma.Core\bin\Debug\net6.0\Karma.Core.deps.json
+C:\Users\OMEN\Desktop\VS Code\Karma.Core\bin\Debug\net6.0\Karma.Core.dll
+C:\Users\OMEN\Desktop\VS Code\Karma.Core\bin\Debug\net6.0\Karma.Core.pdb
+C:\Users\OMEN\Desktop\VS Code\Karma.Core\obj\Debug\net6.0\Karma.Core.csproj.AssemblyReference.cache
+C:\Users\OMEN\Desktop\VS Code\Karma.Core\obj\Debug\net6.0\Karma.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OMEN\Desktop\VS Code\Karma.Core\obj\Debug\net6.0\Karma.Core.AssemblyInfoInputs.cache
+C:\Users\OMEN\Desktop\VS Code\Karma.Core\obj\Debug\net6.0\Karma.Core.AssemblyInfo.cs
+C:\Users\OMEN\Desktop\VS Code\Karma.Core\obj\Debug\net6.0\Karma.Core.csproj.CoreCompileInputs.cache
+C:\Users\OMEN\Desktop\VS Code\Karma.Core\obj\Debug\net6.0\Karma.Core.dll
+C:\Users\OMEN\Desktop\VS Code\Karma.Core\obj\Debug\net6.0\refint\Karma.Core.dll
+C:\Users\OMEN\Desktop\VS Code\Karma.Core\obj\Debug\net6.0\Karma.Core.pdb
+C:\Users\OMEN\Desktop\VS Code\Karma.Core\obj\Debug\net6.0\ref\Karma.Core.dll
