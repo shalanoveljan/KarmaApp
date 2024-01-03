@@ -9,7 +9,10 @@ namespace Karma.Core.DTOS
 {
     public record CategoryGetDto
     {
-        [StringLength(40)]
+        public int Id { get; set; } 
         public string CategoryName { get; set; } = null!;
+        public int ProductCount { get; set; }
+
+        public DateTime CreatedAt { get; set; }
     }
 }

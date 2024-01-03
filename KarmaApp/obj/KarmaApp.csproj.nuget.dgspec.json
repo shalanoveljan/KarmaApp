@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\OMEN\\Desktop\\VS Code\\KarmaApp\\KarmaApp.csproj": {}
+    "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\KarmaApp\\KarmaApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\OMEN\\Desktop\\VS Code\\Karma.Core\\Karma.Core.csproj": {
+    "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Core\\Karma.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\OMEN\\Desktop\\VS Code\\Karma.Core\\Karma.Core.csproj",
+        "projectUniqueName": "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Core\\Karma.Core.csproj",
         "projectName": "Karma.Core",
-        "projectPath": "C:\\Users\\OMEN\\Desktop\\VS Code\\Karma.Core\\Karma.Core.csproj",
+        "projectPath": "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Core\\Karma.Core.csproj",
         "packagesPath": "C:\\Users\\OMEN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\OMEN\\Desktop\\VS Code\\Karma.Core\\obj\\",
+        "outputPath": "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -64,14 +70,14 @@
         }
       }
     },
-    "C:\\Users\\OMEN\\Desktop\\VS Code\\Karma.Data\\Karma.Data.csproj": {
+    "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Data\\Karma.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\OMEN\\Desktop\\VS Code\\Karma.Data\\Karma.Data.csproj",
+        "projectUniqueName": "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Data\\Karma.Data.csproj",
         "projectName": "Karma.Data",
-        "projectPath": "C:\\Users\\OMEN\\Desktop\\VS Code\\Karma.Data\\Karma.Data.csproj",
+        "projectPath": "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Data\\Karma.Data.csproj",
         "packagesPath": "C:\\Users\\OMEN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\OMEN\\Desktop\\VS Code\\Karma.Data\\obj\\",
+        "outputPath": "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -93,8 +99,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\OMEN\\Desktop\\VS Code\\Karma.Core\\Karma.Core.csproj": {
-                "projectPath": "C:\\Users\\OMEN\\Desktop\\VS Code\\Karma.Core\\Karma.Core.csproj"
+              "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Core\\Karma.Core.csproj": {
+                "projectPath": "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Core\\Karma.Core.csproj"
               }
             }
           }
@@ -110,6 +116,12 @@
           "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.25, )"
             },
@@ -138,14 +150,14 @@
         }
       }
     },
-    "C:\\Users\\OMEN\\Desktop\\VS Code\\KarmaApp\\KarmaApp.csproj": {
+    "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Service\\Karma.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\OMEN\\Desktop\\VS Code\\KarmaApp\\KarmaApp.csproj",
-        "projectName": "KarmaApp",
-        "projectPath": "C:\\Users\\OMEN\\Desktop\\VS Code\\KarmaApp\\KarmaApp.csproj",
+        "projectUniqueName": "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Service\\Karma.Service.csproj",
+        "projectName": "Karma.Service",
+        "projectPath": "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Service\\Karma.Service.csproj",
         "packagesPath": "C:\\Users\\OMEN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\OMEN\\Desktop\\VS Code\\KarmaApp\\obj\\",
+        "outputPath": "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -167,8 +179,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\OMEN\\Desktop\\VS Code\\Karma.Data\\Karma.Data.csproj": {
-                "projectPath": "C:\\Users\\OMEN\\Desktop\\VS Code\\Karma.Data\\Karma.Data.csproj"
+              "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Data\\Karma.Data.csproj": {
+                "projectPath": "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Data\\Karma.Data.csproj"
               }
             }
           }
@@ -183,6 +195,83 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\KarmaApp\\KarmaApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\KarmaApp\\KarmaApp.csproj",
+        "projectName": "KarmaApp",
+        "projectPath": "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\KarmaApp\\KarmaApp.csproj",
+        "packagesPath": "C:\\Users\\OMEN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\KarmaApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\OMEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Service\\Karma.Service.csproj": {
+                "projectPath": "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Service\\Karma.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

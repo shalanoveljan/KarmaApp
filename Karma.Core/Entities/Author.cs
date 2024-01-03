@@ -9,15 +9,17 @@ namespace Karma.Core.Entities
 {
     public class Author:BaseEntity
     {
-        public string FullName { get; set; }
+        public string FullName { get; set; } = null!;
 
-        public string Info { get; set; }
+        public string Info { get; set; } = null!;
 
         public int PositionId { get; set; }
 
-        public Position Position { get; set; }
+        public Position Position { get; set; } = null!;
 
-        public List<SocialNetwork> socialNetworks { get; set; }
-        public List<Blog> Blogs { get; set; }
+        public List<SocialNetwork> socialNetworks { get; set; } = null!;
+        public List<Blog> Blogs { get; set; } = null!;
+        public string Image { get; set; } = null!;
+        public string Storage { get; set; } = null!;
     }
 }

@@ -9,7 +9,10 @@ namespace Karma.Core.DTOS
 {
     public  record ColorGetDto
     {
-        [StringLength(40)]
+        public int Id { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public int ProductCount { get; set; }
+
         public string ColorName { get; set; } = null!;
     }
 }

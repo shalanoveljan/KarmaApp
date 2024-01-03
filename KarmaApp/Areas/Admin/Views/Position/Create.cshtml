@@ -1,0 +1,27 @@
+﻿@model PositionPostDto
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Default form</h4>
+                    <p class="card-description">
+                        Basic form layout
+                    </p>
+                    <form method="post" class="forms-sample">
+                        <div class="alert alert-danger" asp-validation-summary="ModelOnly"> </div>
+                        <div class="form-group">
+                            <label asp-for="PositionName">Username</label>
+                            <input type="text" asp-for="PositionName" class="form-control" placeholder="PositionName">
+                            <span class="text text-danger" asp-validation-for="PositionName"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary me-2">Submit</button>
+                        <button class="btn btn-light">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>

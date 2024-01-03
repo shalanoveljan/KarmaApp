@@ -13,6 +13,8 @@ namespace Karma.Core.Entities
         [StringLength(40)]
         public string Name { get; set; } = null!;
 
+        public List<Product> Products { get; set; } = null!;
+
 
     }
 }

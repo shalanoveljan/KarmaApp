@@ -1,6 +1,7 @@
 ﻿using Karma.Core.DTOS;
 using Karma.Core.Entities;
 using Karma.Data.Contexts;
+using Karma.Service.Services.Interfaces;
 using KarmaApp.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,106 +11,54 @@ namespace KarmaApp.Controllers
 	public class ShopController : Controller
 	{
 
-		readonly KarmaDBContext _context;
+        readonly IColorService _colorService;
+        readonly ICategoryService _categoryService;
+        readonly IBrandService _brandService;
+        readonly IProductService _productService;
+        readonly IBasketService _basketService;
 
-		public ShopController(KarmaDBContext context)
-		{
-			_context = context;
-		}
-
-		public IActionResult Index()
-		{
-            ShopViewModel shopVM = new ShopViewModel
-            {
-                categories = _context.Categories.Where(x => !x.iSDeleted).AsNoTracking().Select(x => new CategoryGetDto { CategoryName = x.CategoryName }).AsEnumerable(),
-                brands = _context.Brands.Where(x => !x.iSDeleted).AsNoTracking().Select(x=>new BrandGetDto { BrandName=x.Name}).AsEnumerable(),
-                colors = _context.Colors.Where(x => !x.iSDeleted).AsNoTracking().Select(x=>new ColorGetDto { ColorName=x.ColorName}).AsEnumerable()
-
-            };
-
-         
-            return View(shopVM);
-		}
-        public IActionResult Create()
+        public ShopController(ICategoryService categoryService, IBrandService brandService, IColorService colorService, IProductService productService, IBasketService basketService)
         {
-            return View();
+
+            _categoryService = categoryService;
+            _brandService = brandService;
+            _colorService = colorService;
+            _productService = productService;
+            _basketService = basketService;
+        }
+        public async Task<IActionResult> Index(int page=1)
+        {
+            ShopViewModel shopViewModel = new();
+            shopViewModel.categories = await _categoryService.GetAllAsync(page);
+            shopViewModel.brands = await _brandService.GetAllAsync(page);
+            shopViewModel.colors = await _colorService.GetAllAsync(page);
+            shopViewModel.Products = await _productService.GetAllAsync(page);
+            return View(shopViewModel);
         }
 
-		[HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create(Category category)
+        public async Task<IActionResult> Detail(int id)
         {
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-
-            bool isExist=_context.Categories.Any(c=>c.CategoryName== category.CategoryName);
-
-          //  Category? exist=_context.Categories.FirstOrDefault(x => x.CategoryName.ToLower()==category.CategoryName.ToLower());
-
-            if (isExist)
-            {
-                ModelState.AddModelError("CategoryName", "Category already exist");
-                return View();
-            }
-
-			_context.Categories.Add(category);	
-			_context.SaveChanges();
-            return RedirectToAction("Index","Shop");
+            return View(await _productService.GetAsync(id));
         }
 
-        public IActionResult CreateBrand()
+
+        public async Task<IActionResult> AddBasket(int id, int count = 1)
         {
-            return View();
+            await _basketService.AddBasket(id, count);
+            return RedirectToAction(nameof(Index));
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult CreateBrand(Brand brand)
+        public async Task<IActionResult> Basket()
         {
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-
-            Brand? exist = _context.Brands.FirstOrDefault(x => x.Name.ToLower() == brand.Name.ToLower());
-
-            if (exist != null)
-            {
-                ModelState.AddModelError("", "Brand already exist");
-            }
-
-            _context.Brands.Add(brand);
-            _context.SaveChanges();
-            return RedirectToAction("Index", "Shop");
+            return View(await _basketService.GetBasket());
         }
 
-        public IActionResult CreateColor()
+        public async Task<IActionResult> IncreaseCount(int id)
         {
-            return View();
+            await _basketService.AddBasket(id, null);
+            return RedirectToAction(nameof(Basket));
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult CreateColor(Color color)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-
-            Color? exist = _context.Colors.FirstOrDefault(x => x.ColorName.ToLower() == color.ColorName.ToLower());
-
-            if (exist != null)
-            {
-                ModelState.AddModelError("", "Color already exist");
-            }
-
-            _context.Colors.Add(color);
-            _context.SaveChanges();
-            return RedirectToAction("Index", "Shop");
-        }
 
     }
 }

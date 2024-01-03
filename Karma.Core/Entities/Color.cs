@@ -12,5 +12,7 @@ namespace Karma.Core.Entities
     {
         [StringLength(40)]
         public string ColorName { get; set; } = null!;
+
+        public List<ProductColor> productColors { get; set; } = null!;
     }
 }

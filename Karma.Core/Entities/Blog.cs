@@ -10,18 +10,19 @@ namespace Karma.Core.Entities
     public class Blog:BaseEntity
     {
 
-        public string Title { get; set; }
+        public string Title { get; set; } = null!;
 
-        public string Description { get; set; }
+        public string Description { get; set; } = null!;
+
+        public int AuthorId { get; set; }
+        public string Image { get; set; } = null!;
 
         public int ViewCount { get; set; }
 
-        public string Image { get; set; }
 
-        public int AuthorId { get; set; }
 
-        public Author Author { get; set; }
-        public List<TagBlog> tagBlogs { get; set; }
+        public Author Author { get; set; } = null!;
+        public List<TagBlog> tagBlogs { get; set; } = null!;
 
     }
 }

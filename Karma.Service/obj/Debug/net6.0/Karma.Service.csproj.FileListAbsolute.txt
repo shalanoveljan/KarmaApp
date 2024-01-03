@@ -1,0 +1,17 @@
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\bin\Debug\net6.0\Karma.Service.deps.json
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\bin\Debug\net6.0\Karma.Service.dll
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\bin\Debug\net6.0\Karma.Service.pdb
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\bin\Debug\net6.0\Karma.Core.dll
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\bin\Debug\net6.0\Karma.Data.dll
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\bin\Debug\net6.0\Karma.Data.pdb
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\bin\Debug\net6.0\Karma.Core.pdb
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\obj\Debug\net6.0\Karma.Service.csproj.AssemblyReference.cache
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\obj\Debug\net6.0\Karma.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\obj\Debug\net6.0\Karma.Service.AssemblyInfoInputs.cache
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\obj\Debug\net6.0\Karma.Service.AssemblyInfo.cs
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\obj\Debug\net6.0\Karma.Service.csproj.CoreCompileInputs.cache
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\obj\Debug\net6.0\Karma.Service.csproj.CopyComplete
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\obj\Debug\net6.0\Karma.Service.dll
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\obj\Debug\net6.0\refint\Karma.Service.dll
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\obj\Debug\net6.0\Karma.Service.pdb
+C:\Users\OMEN\Desktop\BackEnd\KarmaTemplate\Karma.Service\obj\Debug\net6.0\ref\Karma.Service.dll

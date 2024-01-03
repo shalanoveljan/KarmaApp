@@ -1,12 +1,14 @@
 ﻿using Karma.Core.DTOS;
+using Karma.Service.Responses;
 
 namespace KarmaApp.ViewModels
 {
     public class ShopViewModel
     {
-        public IEnumerable<CategoryGetDto> categories { get; set; }
-        public IEnumerable<BrandGetDto> brands { get; set; }
-        public IEnumerable<ColorGetDto> colors { get; set; }
+        public PagginatedResponse<CategoryGetDto> categories { get; set; } = null!;
+        public PagginatedResponse<BrandGetDto> brands { get; set; } = null!;
+        public PagginatedResponse<ColorGetDto> colors { get; set; } = null!;
+        public PagginatedResponse<ProductGetDto> Products { get; set; } = null!;
 
 
     }

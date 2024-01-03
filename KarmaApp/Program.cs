@@ -1,5 +1,6 @@
 using Karma.Data.Contexts;
 using Karma.Data.ServiceRegistrations;
+using Karma.Service.CustomMiddlewares;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 //});
 
 builder.Services.DataAccessServiceRegister(builder.Configuration);
+builder.Services.DataAccessServiceRegister();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -24,6 +26,8 @@ if (!app.Environment.IsDevelopment())
 	app.UseHsts();
 }
 
+//app.ConfigureExceptionHandler();
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -31,8 +35,18 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
-	name: "default",
-	pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+      name: "areas",
+      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+
+    endpoints.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+});
 
 app.Run();
+       

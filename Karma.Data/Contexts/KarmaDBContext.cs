@@ -2,6 +2,7 @@
 using Karma.Core.Entities.BaseEntities;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Buffers.Text;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,28 @@ namespace Karma.Data.Contexts
         public DbSet<Author> Authors { get; set; }
         public DbSet<SocialNetwork> SocialNetworks { get; set; }
         public DbSet<Position> Positions { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Specification> Specifications { get; set; }
+        public DbSet<ProductColor> productColors { get; set; }
+        public DbSet<ProductImage> productImages { get; set; }
+
+
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            foreach (var entry in ChangeTracker.Entries<BaseEntity>())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Added:
+                        entry.Entity.CreateAt = DateTime.UtcNow.AddHours(4);
+                        break;
+                    case EntityState.Modified:
+                        entry.Entity.UpdateAt = DateTime.UtcNow.AddHours(4);
+                        break;
+                }
+            }
+            return base.SaveChangesAsync(cancellationToken);
+        }
 
 
 

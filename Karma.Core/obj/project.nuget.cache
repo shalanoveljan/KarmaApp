@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7pLoPv7nAtLhxtjDHckQy8hJrt+t1ci5U4n3GpAsrdCjaqoW49XA1xwVHm4MyURxVWAF9wiNgRMMk5LV1C+1hA==",
+  "dgSpecHash": "6MzJ/OUEdpLSgNuF/oCG2DYfMO6UEeGJRvDUWs2DZEPCIhC9UpctKP4gfGYcItVoOgzTxBeOUnUhso+1OUNUhQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\OMEN\\Desktop\\VS Code\\Karma.Core\\Karma.Core.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\OMEN\\Desktop\\BackEnd\\KarmaTemplate\\Karma.Core\\Karma.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\OMEN\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\OMEN\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\OMEN\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -8,7 +8,9 @@ namespace Karma.Core.DTOS
 {
     public record PositionGetDto
     {
+        public int Id { get; set; }
         public string PositionName { get; set; } = null!;
+        public DateTime CreatedAt { get; set; }
 
     }
 }
